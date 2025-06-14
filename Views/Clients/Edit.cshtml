@@ -1,0 +1,26 @@
+@model ClientCRUD.Models.Client
+
+<h1>Modifier le client</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label>Nom</label>
+        <input asp-for="Nom" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Prénom</label>
+        <input asp-for="Prenom" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" type="email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Téléphone</label>
+        <input asp-for="Telephone" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Modifier</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Annuler</a>
+</form>

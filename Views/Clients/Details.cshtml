@@ -1,0 +1,12 @@
+@model ClientCRUD.Models.Client
+
+<h1>Détails du client</h1>
+
+<div>
+    <strong>Nom :</strong> @Model.Nom <br />
+    <strong>Prénom :</strong> @Model.Prenom <br />
+    <strong>Email :</strong> @Model.Email <br />
+    <strong>Téléphone :</strong> @Model.Telephone <br />
+</div>
+
+<p><a href="@Url.Action("Index")" class="btn btn-secondary">Retour</a></p>

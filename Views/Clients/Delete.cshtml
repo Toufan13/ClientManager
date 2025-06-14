@@ -1,0 +1,16 @@
+@model ClientCRUD.Models.Client
+
+<h1>Supprimer le client</h1>
+
+<p>Êtes-vous sûr de vouloir supprimer ce client ?</p>
+
+<div>
+    <strong>Nom :</strong> @Model.Nom <br />
+    <strong>Prénom :</strong> @Model.Prenom <br />
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Supprimer</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Annuler</a>
+</form>

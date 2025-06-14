@@ -1,0 +1,25 @@
+@model ClientCRUD.Models.Client
+
+<h1>Ajouter un client</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Nom</label>
+        <input asp-for="Nom" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Prénom</label>
+        <input asp-for="Prenom" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" type="email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Téléphone</label>
+        <input asp-for="Telephone" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Enregistrer</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Annuler</a>
+</form>
